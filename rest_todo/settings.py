@@ -135,6 +135,9 @@ STATIC_ROOT = RESOURCES_DIR / 'static'
 MEDIA_ROOT = RESOURCES_DIR / 'media'
 MEDIA_URL = '/media/'
 
+
+AUTH_USER_MODEL = 'user.User'
+
 from datetime import timedelta
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
