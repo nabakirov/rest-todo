@@ -1,11 +1,12 @@
 from rest_framework import serializers as s
-from . import models, exceptions
+from . import models
+from rest_todo import exceptions
 
 
 class UserSerializer(s.ModelSerializer):
     class Meta:
         model = models.User
-        fields = ('username', 'name', 'creation_date')
+        fields = ('username', 'name', 'creation_date', 'last_login')
         read_only_fields = ('creation_date',)
 
 
