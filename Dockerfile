@@ -8,4 +8,4 @@ RUN pip install -r requirements.txt
 
 COPY . /app
 
-CMD python manage.py migrate && gunicorn -w 3 -b 0.0.0.0:80 ntm.wsgi
+CMD python manage.py migrate && gunicorn rest_todo.wsgi --workers 3 --bind unix:/sockets/rest_todo.sock
