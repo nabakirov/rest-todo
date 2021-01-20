@@ -10,3 +10,7 @@ class UniqueError(ValidationError):
 class ForeignKeyDoesNotExistError(ValidationError):
     default_code = 'does_not_exist'
     default_detail = 'Invalid pk, object does not exist.'
+
+
+class InvalidType(ValidationError):
+    ...
