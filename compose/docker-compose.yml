@@ -9,7 +9,7 @@ services:
     restart: always
     image: nginx
     ports:
-        - "80:80"
+        - "${PORT}:80"
     hostname: nginx
     container_name: nginx
     volumes:
