@@ -1,4 +1,4 @@
-# rest-todo
+# REST todo's web app
 
 ## Table of content
  - [installation](#installation)
