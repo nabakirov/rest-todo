@@ -6,7 +6,7 @@ from rest_todo import exceptions
 class UserSerializer(s.ModelSerializer):
     class Meta:
         model = models.User
-        fields = ('username', 'name', 'creation_date', 'last_login')
+        fields = ('id', 'username', 'name', 'creation_date', 'last_login')
         read_only_fields = ('creation_date',)
 
 
