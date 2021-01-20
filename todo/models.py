@@ -16,6 +16,7 @@ class Todo(models.Model):
     description = models.TextField(_('description'), null=True, blank=True)
     creation_date = models.DateTimeField(_('creation date'), null=False, auto_now_add=True)
     schedule = models.DateField(_('schedule'), null=True, blank=True)
+    is_done = models.BooleanField(_('is done'), null=False, default=False)
 
     def __str__(self):
         return self.title
