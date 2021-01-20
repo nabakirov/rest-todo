@@ -1,6 +1,6 @@
 from rest_framework import serializers as s
 from . import models
-from rest_todo.exceptions import ForeignKeyNotFoundError
+from rest_todo.exceptions import ForeignKeyDoesNotExistError
 
 
 class CategorySerializer(s.ModelSerializer):
@@ -11,5 +11,5 @@ class CategorySerializer(s.ModelSerializer):
 
     def validate_parent(self, value):
         if value.user_id != self.context['request'].user.id:
-            raise ForeignKeyNotFoundError()
+            raise ForeignKeyDoesNotExistError()
         return value

@@ -7,6 +7,6 @@ class UniqueError(ValidationError):
     default_detail = 'field must be unique'
 
 
-class ForeignKeyNotFoundError(ValidationError):
-    default_code = 'not_found'
-    default_detail = 'foreign key not found'
+class ForeignKeyDoesNotExistError(ValidationError):
+    default_code = 'does_not_exist'
+    default_detail = 'Invalid pk, object does not exist.'
